@@ -21,10 +21,11 @@ const MARK_NAME_JS_READY: string = `${ORIGIN_BOXAI_SIDEBAR}_${EVENT_JS_READY}`;
 mark(MARK_NAME_JS_READY);
 
 export interface BoxAISidebarProps {
+    element: string;
     onExpandPressed: () => void;
 }
 
-function BoxAISidebar() {
+function BoxAISidebar({ element }: BoxAISidebarProps) {
     const { formatMessage } = useIntl();
 
     return (
@@ -33,7 +34,7 @@ function BoxAISidebar() {
             sidebarView={SIDEBAR_VIEW_BOXAI}
             title={formatMessage(messages.sidebarBoxAITitle)}
         >
-            <div className="bcs-BoxAISidebar-content" />
+            <div className="bcs-BoxAISidebar-content">{element}</div>
         </SidebarContent>
     );
 }

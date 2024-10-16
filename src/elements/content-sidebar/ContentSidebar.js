@@ -350,6 +350,7 @@ class ContentSidebar extends React.Component<Props, State> {
             hasMetadata,
             hasNav,
             hasSkills,
+            hasBoxAI,
             hasVersions,
             history,
             isDefaultOpen,
@@ -391,6 +392,7 @@ class ContentSidebar extends React.Component<Props, State> {
                                 hasMetadata={hasMetadata}
                                 hasSkills={hasSkills}
                                 hasVersions={hasVersions}
+                                hasBoxAI={hasBoxAI}
                                 isDefaultOpen={isDefaultOpen}
                                 isLoading={isLoading}
                                 metadataEditors={metadataEditors}
